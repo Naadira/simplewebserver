@@ -1,27 +1,5 @@
-# EX01 Developing a Simple Webserver
-## Date: 23/03/2024
-
-## AIM:
-To develop a simple webserver to serve html pages.
-
-## DESIGN STEPS:
-### Step 1: 
-HTML content creation.
-
-### Step 2:
-Design of webserver workflow.
-
-### Step 3:
-Implementation using Python code.
-
-### Step 4:
-Serving the HTML pages.
-
-### Step 5:
-Testing the webserver.
-
-## PROGRAM:
-```
+from http.server import HTTPServer,BaseHTTPRequestHandler
+content = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -196,79 +174,19 @@ button{
     </div>
     
 </div>
-
-<div class="row5">
-    <div class="col-3" id="div1">
-      <img src="assests/css/Screenshot 2024-03-23 141103.png" >
-    </div>
-    <div class="col-6" id="div2">
-      <img src="assests/css/Screenshot 2024-03-23 141539.png" alt="" width="700px">
-      <p>
-        SEC is a leading Engineering College located in Chennai, India., which offers a global approach to education and research, with a focus on global perspectives and expertise. SEC offers a wide range of undergraduate, postgraduate and doctoral programs in Engineering. Some of its Academic Highlights are,
-
-Only Engineering College in India to have 30 students per class.
-91% results in University exam.
-173 University Ranks.
-Compulsory internship every year. 
-      </p>
-    </div>
-    <div class="col-3" id="div3">
-      <h4>
-        Latest Events
-      </h4>
-      <br>
-      <p class="date">
-        19 Mar 2024;
-        </p>
-        <p class="event">
-        A warm welcome to HR Team of 'Foxconn Industrial Internet'.
-      </p>
-      <hr>
-      <p class="date">
-        21 Mar 2024;
-      </p>
-      <p class="event">
-       MBA Final Year learners bagged a coveted placement at 'HDB Financial Services'
-      </p>
-      <hr>
-    <p class="date">16 Mar 2024;
-      </p>
-      <p class="event">
-      SEC kick started cultural fest - CELANZA’24 with a Big Bang</p>
-    </div>
-  </div>
-  <div class="row6">
-    <div class="col-4">
-      <img src="assests/css/logo.png" alt="" width="400px" height="65px">
-    </div>
-    <div class="col-2" id="icon1">
-      <a href="#">
-        <i class="bi bi-envelope"></i>  Contact Us Today
-      </a>
-    </div>
-    <div class="col-3" id="icon2">
-      <a href="#">
-        <i class="bi bi-telephone"></i> +91 4466726677
-      </a>
-    </div>
-
-    <div class="col-3" id="icon3">
-      <a href="#">
-        <i class="bi bi-telephone"></i> +91 4466726690
-      </a>
-    </div>
-
-  </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
-```
+"""
+class MyServer(BaseHTTPRequestHandler):
+    def do_GET(self):
+        print("Get request received...")
+        self.send_response(200) 
+        self.send_header("content-type", "text/html")       
+        self.end_headers()
+        self.wfile.write(content.encode())
 
-## OUTPUT:
-![alt text](<Screenshot (10).png>)
-![alt text](<Screenshot (11).png>)
-![alt text](<Screenshot (12).png>)
-
-## RESULT:
-The program for implementing simple webserver is executed successfully.
+print("my webserver is running...") 
+server_address =('',8000)
+httpd = HTTPServer(server_address,MyServer)
+httpd.serve_forever()
