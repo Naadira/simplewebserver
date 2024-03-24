@@ -28,58 +28,56 @@ Testing the webserver.
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Saveetha Home Page</title>
-<style>
-*
-{
-    box-sizing: border-box;
+    <style>
+    i{
+    color:#cc324b;
+    font-size: 20px;
+    padding: 10px;
 }
-body{
-    margin:0;
-    background-color:wheat;
+i:hover {
+    color: black;
 }
-.first-part
-{
-    background-color: gray;
-    width: 100%;
-    border:solid 1px black;
-    padding:1.5%;
+.anchor{
+    text-decoration: none;
+    color: #cc324b;
+    font-size: 15px;
+    font-family:Arial ;
+    padding: 5px;
 }
-
-.second-part
-{
-    padding:4%;
-    padding:2%;
-    margin-left:1%;
-    background-color: white;
-    border-radius: 15px;
-}
-
-#part
-{
-    font-size: 105%;
-}
-
 .aside
 {
-    
-    width:30%;
-    margin:1% 0% 0% 1%;
-    background-color: rgb(205, 78, 78);
-    padding:2%;
-    align-items: center;
-}
-button{
-    background-color: white;
-   padding:3%;
-}
-#text
-{
-    color:white;
-    padding:3%;
-    font-size: 30px;
-}
-</style>   
 
+width:30%;
+margin:1% 0% 0% 1%;
+background-color: rgb(205, 78, 78);
+margin-top: 0%;
+padding:2%;
+align-items: center;
+}
+.images {
+  display: flex;
+  
+
+}
+.images > div {
+  margin-right: 10px;
+  margin-left: 5px;
+  margin-inline-start: 10px;         
+  
+}
+.row6 {
+display: flex;
+align-items: center; 
+
+justify-content: space-between;
+}
+.row5 {
+display: flex;
+align-items: center; 
+margin-top: 5px;
+justify-content: space-between;
+}
+<style>
 </head>
 <body>
     <div class="row" style="background-color:#f3f3f3">
@@ -153,7 +151,7 @@ button{
         </div>
     </div>
     <div style="display:flex;">
-      <div class="aside" style="width:20%; height:600px;">
+      <div class="aside" style="width:20%; height:570px;">
           <p id="text">ADMISSION ENQUIRY</p>
           <button>APPLY NOW</button>
           <hr>
@@ -194,71 +192,93 @@ button{
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+    </div>
+    <br>
+    <div class="images">
+      <div id="img1">
+       <img src="assets/images/img1.jpg" alt="" width="250px" ,height="150px">
+      </div>
+      <div id="img2">
+       <img src="assets/images/img2.jpg" alt="" width="250px" ,height="150px">
+      </div>
+      <div id="img3">
+       <img src="assets/images/img3.jpg" alt="" width="250px" ,height="150px">
+      </div>
+      <div id="img4">
+       <img src="assets/images/img4.jpg" alt="" width="250px" ,height="150px">
+      </div>
+      <div id="img5">
+       <img src="assets/images/img5.jpg" alt="" width="250px" ,height="150px">
+      </div>
+     </div>
     
 </div>
 
 <div class="row5">
-    <div class="col-3" id="div1">
-      <img src="assests/css/Screenshot 2024-03-23 141103.png" >
-    </div>
-    <div class="col-6" id="div2">
-      <img src="assests/css/Screenshot 2024-03-23 141539.png" alt="" width="700px">
-      <p>
-        SEC is a leading Engineering College located in Chennai, India., which offers a global approach to education and research, with a focus on global perspectives and expertise. SEC offers a wide range of undergraduate, postgraduate and doctoral programs in Engineering. Some of its Academic Highlights are,
+  <div class="col-3" id="div1">
+    <img src="assets/images/img6.png" height="400px" >
+  </div>
+  <br>
+  <div class="col-6" id="div2">
+    <img src="assets/images/img7.jpg" alt="" width="600px">
+    <p>
+      SEC is a leading Engineering College located in Chennai, India., which offers a global approach to education and research, with a focus on global perspectives and expertise. SEC offers a wide range of undergraduate, postgraduate and doctoral programs in Engineering. Some of its Academic Highlights are,
 
 Only Engineering College in India to have 30 students per class.
 91% results in University exam.
 173 University Ranks.
 Compulsory internship every year. 
-      </p>
-    </div>
-    <div class="col-3" id="div3">
-      <h4>
-        Latest Events
-      </h4>
-      <br>
-      <p class="date">
-        19 Mar 2024;
-        </p>
-        <p class="event">
-        A warm welcome to HR Team of 'Foxconn Industrial Internet'.
-      </p>
-      <hr>
-      <p class="date">
-        21 Mar 2024;
+    </p>
+  </div>
+  <div class="col-3" id="div3">
+    <h4>
+      Latest Events
+    </h4>
+    <br>
+    <p class="date">
+      19 Mar 2024;
       </p>
       <p class="event">
-       MBA Final Year learners bagged a coveted placement at 'HDB Financial Services'
-      </p>
-      <hr>
-    <p class="date">16 Mar 2024;
-      </p>
-      <p class="event">
-      SEC kick started cultural fest - CELANZA’24 with a Big Bang</p>
-    </div>
+      A warm welcome to HR Team of 'Foxconn Industrial Internet'.
+    </p>
+    <hr>
+    <p class="date">
+      21 Mar 2024;
+    </p>
+    <p class="event">
+     MBA Final Year learners bagged a coveted placement at 'HDB Financial Services'
+    </p>
+    <hr>
+  <p class="date">16 Mar 2024;
+    </p>
+    <p class="event">
+    SEC kick started cultural fest - CELANZA’24 with a Big Bang</p>
   </div>
-  <div class="row6">
-    <div class="col-4">
-      <img src="assests/css/logo.png" alt="" width="400px" height="65px">
-    </div>
-    <div class="col-2" id="icon1">
-      <a href="#">
-        <i class="bi bi-envelope"></i>  Contact Us Today
-      </a>
-    </div>
-    <div class="col-3" id="icon2">
-      <a href="#">
-        <i class="bi bi-telephone"></i> +91 4466726677
-      </a>
-    </div>
+</div>
 
-    <div class="col-3" id="icon3">
-      <a href="#">
-        <i class="bi bi-telephone"></i> +91 4466726690
-      </a>
-    </div>
-
+<div class="row6" >
+  <div class="col-4">
+    <img src="assets/images/logo.png" alt="" width="400px" height="65px">
   </div>
+  <div class="col-2" id="icon1">
+    <a href="#">
+      <i class="bi bi-envelope"></i>  Contact Us Today
+    </a>
+  </div>
+  <div class="col-3" id="icon2">
+    <a href="#">
+      <i class="bi bi-telephone"></i> +91 4466726677
+    </a>
+  </div>
+
+  <div class="col-3" id="icon3">
+    <a href="#">
+      <i class="bi bi-telephone"></i> +91 4466726690
+    </a>
+  </div>
+
+</div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
